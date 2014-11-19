@@ -5,6 +5,7 @@
 #include <Wire.h>
 #define DHTPIN 4
 #define DHTTYPE DHT11
+#define MOSTURE_PIN A2
 
 OneWire onewire(6);
 DallasTemperature sensor(&onewire);
@@ -29,10 +30,9 @@ void loop(){
   Serial.print("The lux is: ");
   Serial.println(lux);
   sensor.requestTemperatures();
-  
   Serial.print("Temp: ") ;
   Serial.println(sensor.getTempCByIndex(0));
-  
+  Serial.println(analogRead(MOSTURE_PIN));
 
 
 
