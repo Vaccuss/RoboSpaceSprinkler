@@ -33,8 +33,4 @@ void loop(){
   Serial.print("Temp: ") ;
   Serial.println(sensor.getTempCByIndex(0));
   Serial.println(analogRead(MOSTURE_PIN));
-
-
-
-
 }
